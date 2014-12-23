@@ -34,7 +34,7 @@ public class Main
     static Rectangle2D.Double splashTextArea;       // area where we draw the text
     static Rectangle2D.Double splashProgressArea;   // area where we draw the progress bar
     static Font font;                               // used to draw our text
-
+    
     public static void main(String[] args)
     {
         splashInit();           // initialize splash overlay drawing parameters

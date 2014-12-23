@@ -47,8 +47,11 @@ public class TvConvertMainForm extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Convert HD TV2Avi");
+        setAlwaysOnTop(true);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setFocusTraversalPolicyProvider(true);
+        setLocationByPlatform(true);
+        setState(0);
 
         jLabel1.setFont(new java.awt.Font("Haettenschweiler", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

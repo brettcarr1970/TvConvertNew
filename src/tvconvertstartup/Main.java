@@ -39,9 +39,9 @@ public class Main
     {
         splashInit();           // initialize splash overlay drawing parameters
         appInit();              // simulate what an application would do before starting
-        if (mySplash != null)   // check if we really had a spash screen
+        if (mySplash != null){   // check if we really had a spash screen
             mySplash.close();   // we're done with it
-        
+        }
         // begin with the interactive portion of the program
         String[] stfm = {"1,2,3,4"};
       TvConvertMainForm.startForm(stfm);

@@ -51,11 +51,7 @@ public class TvConvertMainForm extends javax.swing.JFrame {
         setAlwaysOnTop(true);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setLocationByPlatform(true);
-        addWindowListener(new java.awt.event.WindowAdapter() {
-            public void windowOpened(java.awt.event.WindowEvent evt) {
-                formWindowOpened(evt);
-            }
-        });
+        setState(0);
 
         jLabel1.setFont(new java.awt.Font("Haettenschweiler", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -188,11 +184,6 @@ public class TvConvertMainForm extends javax.swing.JFrame {
         // TODO add your handling code here:
        System.exit(0);
     }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-        // TODO add your handling code here:
-        this.setLocationRelativeTo(null);
-    }//GEN-LAST:event_formWindowOpened
 
    
 

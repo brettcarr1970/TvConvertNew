@@ -5,6 +5,7 @@
  */
 package tvconvertstartup;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.regex.Pattern;
@@ -15,19 +16,29 @@ import java.util.regex.Pattern;
  */
 public class TvConvertRunThread {
 
+    /**
+     * creates a process variable
+     */
     protected static Process process = null;
+
+    /**
+     * Creates a thread variable
+     */
     protected volatile static Thread t = null;
 
     /**
      * Creates a process using ProcessBuilder the starts a thread so output is
      * available. The run method passes the progress to the progress bar on the
-     * MashFormCunts form.
+     * Main form.
      *
      * @param tvConvertMainForm
      * @throws IOException
      */
     public static void startThread(final TvConvertMainForm tvConvertMainForm) throws IOException {
-        ProcessBuilder pb = new ProcessBuilder("ffmpeg", "-i", TvConvertSetUp.destFile.toString(), "C:\\Users\\brett\\Documents\\out.mp4");
+        char sep = File.separatorChar;
+        String spew = System.getProperty("user.home"), doc = "Documents",wrkdir = "ConvertedTvFiles";
+        //System.out.print(TvConvertSetUp.fileToBeConverted);
+        ProcessBuilder pb = new ProcessBuilder("ffmpeg", "-i", TvConvertSetUp.destFile.toString(),"-map","0:a:0", spew+sep+doc+sep+wrkdir+sep+TvConvertSetUp.fileToBeConverted+".mp3");
         final Process p = pb.start();
         TvConvertRunThread.process = p;
         t = new Thread() {

@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package tvconvertstartup;
-
+import java.awt.Toolkit;
 import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -17,16 +17,23 @@ import javax.swing.JFileChooser;
  */
 public class TvConvertMainForm extends javax.swing.JFrame {
 
+    /**
+     *
+     */
     protected File file = null;
-    
+    //ImageIcon icon = new ImageIcon("icon.png");
 
     /**
      * Creates new form ConvertMainForm
      */
     public TvConvertMainForm() {
         initComponents();
+        setIcon();
     }
 
+     private void setIcon() {
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icon.png")));
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -53,8 +60,8 @@ public class TvConvertMainForm extends javax.swing.JFrame {
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setExtendedState(1);
         setFocusTraversalPolicyProvider(true);
+        setIconImages(null);
         setLocationByPlatform(true);
-        setMaximumSize(getPreferredSize());
         setMinimumSize(getPreferredSize());
         setPreferredSize(new java.awt.Dimension(420, 320));
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -126,6 +133,8 @@ public class TvConvertMainForm extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(0, 0, 404, 293);
         jLabel2.getAccessibleContext().setAccessibleName("MyBackGround");
+
+        getAccessibleContext().setAccessibleParent(this);
 
         pack();
         setLocationRelativeTo(null);
@@ -242,4 +251,6 @@ public class TvConvertMainForm extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
+
+   
 }

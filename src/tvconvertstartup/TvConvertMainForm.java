@@ -28,6 +28,7 @@ public class TvConvertMainForm extends javax.swing.JFrame {
      */
     public TvConvertMainForm() {
         initComponents();
+
         setIcon();
     }
 
@@ -60,15 +61,14 @@ public class TvConvertMainForm extends javax.swing.JFrame {
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setExtendedState(1);
         setFocusTraversalPolicyProvider(true);
+        setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        setForeground(java.awt.Color.lightGray);
         setIconImages(null);
         setLocationByPlatform(true);
+        setMaximumSize(new java.awt.Dimension(404, 294));
         setMinimumSize(getPreferredSize());
-        setPreferredSize(new java.awt.Dimension(420, 320));
-        addWindowListener(new java.awt.event.WindowAdapter() {
-            public void windowOpened(java.awt.event.WindowEvent evt) {
-                formWindowOpened(evt);
-            }
-        });
+        setPreferredSize(new java.awt.Dimension(410, 310));
+        setResizable(false);
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Haettenschweiler", 0, 24)); // NOI18N
@@ -126,10 +126,10 @@ public class TvConvertMainForm extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tvconvertstartup/TvConvertSplashScreen.png"))); // NOI18N
         jLabel2.setAlignmentY(0.0F);
         jLabel2.setFocusTraversalPolicyProvider(true);
-        jLabel2.setMaximumSize(new java.awt.Dimension(420, 320));
-        jLabel2.setMinimumSize(new java.awt.Dimension(420, 320));
+        jLabel2.setMaximumSize(new java.awt.Dimension(405, 294));
+        jLabel2.setMinimumSize(new java.awt.Dimension(405, 294));
         jLabel2.setName("MyBack"); // NOI18N
-        jLabel2.setPreferredSize(new java.awt.Dimension(404, 293));
+        jLabel2.setPreferredSize(new java.awt.Dimension(405, 294));
         getContentPane().add(jLabel2);
         jLabel2.setBounds(0, 0, 404, 293);
         jLabel2.getAccessibleContext().setAccessibleName("MyBackGround");
@@ -182,11 +182,6 @@ public class TvConvertMainForm extends javax.swing.JFrame {
         // TODO add your handling code here:
        System.exit(0);
     }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-        // TODO add your handling code here:
-        this.setLocationRelativeTo(null);
-    }//GEN-LAST:event_formWindowOpened
 
    
 
